@@ -1,7 +1,31 @@
 package com.facebook.controller;
 
+import java.util.Scanner;
+
 public class FacebookController {
 	public void createProfile() {
+		
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.println("Enter Your Name");
+		String name=sc.next();
+		
+		System.out.println("Enter Password");
+		String password=sc.next();
+		
+		System.out.println("Enter Email");
+		String email=sc.next();
+		
+		System.out.println("Enter Address");
+		String address=sc.next();
+		
+		System.out.println("your profile details is below------>");
+		System.out.println("Your Name is "+name);
+		System.out.println("Your password is "+password);
+		System.out.println("Your Email is "+email);
+		System.out.println("Your address is "+address);
+		
+		
 		System.out.println("profile created");
 	}
 	
