@@ -8,6 +8,10 @@ public class Function_Demo {
 	//method/function with any word except void means it will return result
 	public static void main(String[] args) {
 		
+		String ss="yes";
+		
+		while(ss.equals("yes")) {
+		
 		System.out.println("***********************MAIN MENU*********************");
 		System.out.println("press 1 to create profile");
 		System.out.println("press 2 to view profile");
@@ -22,19 +26,37 @@ public class Function_Demo {
 		Scanner sc=new Scanner(System.in);
 		int choice=sc.nextInt();  //nextInt() method is use to read integer from console
 		
-		System.out.println(choice);
+		Function_Demo f=new Function_Demo();
+		
+		switch(choice) {
+		case 1 : createProfile();
+			break;
+		case 2 : viewProfile();
+			break;
+		case 3 : deleteProfile();
+			break;
+		case 4 : f.editProfile();
+			break;
+		case 5 : f.searchProfile();
+			break;
+			default : System.out.println("wrong choice");
+		
+		}
+		System.out.println("do you want to continue press yes or no");
+		ss=sc.next();
+		}
 		
 		
 		
 		//all static methods can be called inside another static methods directly
-		createProfile();
-		viewProfile();
-		deleteProfile();
+		//createProfile();
+		//viewProfile();
+		//deleteProfile();
 		
 		//all the non-static methods can be called inside static methods using object
-		Function_Demo f=new Function_Demo();
-		f.editProfile();
-		f.searchProfile();
+		//Function_Demo f=new Function_Demo();
+		//f.editProfile();
+		//f.searchProfile();
 	}
 	
 	public static void createProfile() {
