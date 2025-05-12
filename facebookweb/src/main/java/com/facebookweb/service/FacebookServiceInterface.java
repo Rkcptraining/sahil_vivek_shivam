@@ -1,5 +1,7 @@
 package com.facebookweb.service;
 
+import java.util.ArrayList;
+
 import com.facebookweb.entity.FacebookUser;
 
 public interface FacebookServiceInterface {
@@ -11,5 +13,9 @@ public interface FacebookServiceInterface {
 	FacebookUser viewProfileService(FacebookUser fb);
 
 	int editProfileService(FacebookUser fb);
+
+	int deleteProfileService(FacebookUser fb);
+
+	ArrayList<FacebookUser> viewAllProfileService();
 
 }
